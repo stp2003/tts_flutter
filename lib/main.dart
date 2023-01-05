@@ -32,7 +32,7 @@ class TextToSpeech extends StatelessWidget {
 
   speak(String text) async {
     await flutterTts.setLanguage("en-Us");
-    await flutterTts.setPitch(1.1);
+    await flutterTts.setPitch(1);
     await flutterTts.speak(text);
   }
 

@@ -12,12 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'TTS flutter',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         body: Center(child: TextToSpeech()),
       ),
     );
@@ -45,11 +45,17 @@ class TextToSpeech extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            TextFormField(controller: textEditingController),
+            TextFormField(
+              controller: textEditingController,
+              style: const TextStyle(color: Colors.yellowAccent),
+            ),
             const SizedBox(
-              height: 20,
+              height: 30,
             ),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.pinkAccent,
+              ),
               child: const Text("Start Text To Speech"),
               onPressed: () => speak(textEditingController.text),
             )

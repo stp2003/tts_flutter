@@ -46,6 +46,7 @@ class TextToSpeech extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             TextFormField(
+              cursorColor: Colors.white,
               controller: textEditingController,
               style: const TextStyle(color: Colors.yellowAccent),
             ),
